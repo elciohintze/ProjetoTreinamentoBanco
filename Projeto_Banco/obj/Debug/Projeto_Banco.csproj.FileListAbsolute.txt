@@ -1,0 +1,7 @@
+c:\users\elcio.hintze\documents\visual studio 2015\Projects\Projeto_Banco\Projeto_Banco\bin\Debug\Projeto_Banco.exe.config
+c:\users\elcio.hintze\documents\visual studio 2015\Projects\Projeto_Banco\Projeto_Banco\bin\Debug\Projeto_Banco.exe
+c:\users\elcio.hintze\documents\visual studio 2015\Projects\Projeto_Banco\Projeto_Banco\bin\Debug\Projeto_Banco.pdb
+c:\users\elcio.hintze\documents\visual studio 2015\Projects\Projeto_Banco\Projeto_Banco\obj\Debug\Projeto_Banco.exe
+c:\users\elcio.hintze\documents\visual studio 2015\Projects\Projeto_Banco\Projeto_Banco\obj\Debug\Projeto_Banco.pdb
+C:\Users\elcio.hintze\Documents\Visual Studio 2015\Projects\Projeto_Banco\Projeto_Banco\obj\Debug\Projeto_Banco.csprojAssemblyReference.cache
+C:\Users\elcio.hintze\Documents\Visual Studio 2015\Projects\Projeto_Banco\Projeto_Banco\obj\Debug\Projeto_Banco.csproj.CoreCompileInputs.cache
