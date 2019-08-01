@@ -8,7 +8,7 @@ namespace Projeto_Banco.Menus
 {
     class MenuCadastrarPJuridica
     {
-        public void CadastrarPessoaJuridica()
+        public void MenuCadastrarPessoaJuridica()
         {
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("                 MyBank                  ");
@@ -20,60 +20,78 @@ namespace Projeto_Banco.Menus
             Console.WriteLine("                 MyBank                  ");
             Console.WriteLine("-----------------------------------------");
 
-            var teclaDigitada = Console.ReadKey(); 
+            var teclaDigitada = Console.ReadKey();
 
-            if (teclaDigitada.Key == ConsoleKey.F1)
+            switch (teclaDigitada.Key)
             {
+                case ConsoleKey.F1:
+                    CadastrarPessoaJuridica();
+                    break;
 
-
-                PessoaJuridica pj = new PessoaJuridica();
-                List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
-
-                Console.WriteLine("Informe o ID");
-                pj.Id = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Informe a razão social: ");
-                pj.RazaoSocial = Console.ReadLine();
-
-                Console.WriteLine("Informa o nome fantasia: ");
-                pj.NomeFantasia = Console.ReadLine();
-
-                bool isValidCnpj = false;
-                while (!isValidCnpj)
-                {
-                    Console.WriteLine("Informe o CNPJ: ");
-                    var cnpjDigitado = Console.ReadLine();
-                    if (ValidaCNPJ.IsCnpj(cnpjDigitado))
-                    {
-                        pj.Cnpj = cnpjDigitado;
-                        isValidCnpj = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("CNPJ Invalido! \n Por favor digite um CNPJ valido");
-                    }
-                }
-
-                Console.WriteLine("Informe Data abertura: \n");
-                pj.DtAbertura = Convert.ToDateTime(Console.ReadLine());
-
-                Console.WriteLine("Informe o logradouro: ");
-                pj.Logradouro = Console.ReadLine();
-
-                Console.WriteLine("Informe o numero do logradouro: ");
-                pj.NumeroLogradouro = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Informe o nome da cidade: ");
-                pj.Cidade = Console.ReadLine();
-
-                Console.WriteLine("Informe a UF: ");
-                pj.Uf = Console.ReadLine();
-
-                listaPj.Add(pj);
-
-                Console.WriteLine("Dados Salvos! Segue detalhes:");
+                case ConsoleKey.F2:
+                    Console.Clear();
+                    MenuPrincipal mp = new MenuPrincipal();
+                    mp.TelaInicial();
+                    break;
 
             }
+
+           
+        }
+
+        public void CadastrarPessoaJuridica()
+        {
+            PessoaJuridica pj = new PessoaJuridica();
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+            Console.Clear();
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("CADASTRANDO PESSOA JURIDICA");
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine("Informe o ID");
+            pj.Id = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Informe a razão social: ");
+            pj.RazaoSocial = Console.ReadLine();
+
+            Console.WriteLine("Informa o nome fantasia: ");
+            pj.NomeFantasia = Console.ReadLine();
+
+            bool isValidCnpj = false;
+            while (!isValidCnpj)
+            {
+                Console.WriteLine("Informe o CNPJ: ");
+                var cnpjDigitado = Console.ReadLine();
+                if (ValidaCNPJ.IsCnpj(cnpjDigitado))
+                {
+                    pj.Cnpj = cnpjDigitado;
+                    isValidCnpj = true;
+                }
+                else
+                {
+                    Console.WriteLine("CNPJ Invalido! \n Por favor digite um CNPJ valido");
+                }
+            }
+
+            Console.WriteLine("Informe Data abertura: \n");
+            pj.DtAbertura = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("Informe o logradouro: ");
+            pj.Logradouro = Console.ReadLine();
+
+            Console.WriteLine("Informe o numero do logradouro: ");
+            pj.NumeroLogradouro = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Informe o nome da cidade: ");
+            pj.Cidade = Console.ReadLine();
+
+            Console.WriteLine("Informe a UF: ");
+            pj.Uf = Console.ReadLine();
+
+            listaPj.Add(pj);
+
+            Console.WriteLine("Dados Salvos! Segue detalhes:");
         }
     }
 }
