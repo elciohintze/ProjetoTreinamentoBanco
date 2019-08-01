@@ -8,7 +8,7 @@ namespace Projeto_Banco
 {
     public static class ValidaCPF
     {
-        public static bool IsCpf(string cpf) //Código da classe ValidaCPF - O método IsCpf retorna True para um CPF válido e False para um CPF inválido
+        public static bool IsCpf(this string cpf) //Código da classe ValidaCPF - O método IsCpf retorna True para um CPF válido e False para um CPF inválido
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };

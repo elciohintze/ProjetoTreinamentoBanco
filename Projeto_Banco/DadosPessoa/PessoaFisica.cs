@@ -13,7 +13,7 @@ namespace Projeto_Banco
         public string Cpf { get; set; }
         public DateTime DtNascimento { get; set; }
         public string Logradouro { get; set; }
-        public int Numero { get; set; }
+        public int NumeroLogradouro { get; set; }
         public string Cidade { get; set; }
         public string Uf { get; set; }
     }
