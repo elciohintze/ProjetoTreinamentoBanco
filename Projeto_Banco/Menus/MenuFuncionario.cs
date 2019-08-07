@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto_Banco.Menus;
 
 namespace Projeto_Banco.Menus
 {
-    class MenuCadastroFuncionario
+    class MenuFuncionario
     {
-       public void MenuCadastrarPessoaFisica()
+        public void MenuCadastrarFuncionario()
         {
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("                 MyBank                  ");
@@ -21,6 +22,25 @@ namespace Projeto_Banco.Menus
             Console.WriteLine("-----------------------------------------");
 
             var opcaoSelecionada = Console.ReadKey();
+
+            switch (opcaoSelecionada.Key)
+            {
+                case ConsoleKey.F1:
+
+                    break;
+
+                case ConsoleKey.F2:
+                    Console.Clear();
+                    MenuPrincipal mp = new MenuPrincipal();
+                    mp.TelaInicial();
+                    break;
+
+            }
+        }
+
+        public void NovoCadastroFuncionario()
+        {
+
         }
     }
 }

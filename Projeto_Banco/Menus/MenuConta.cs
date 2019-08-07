@@ -31,8 +31,8 @@ namespace Projeto_Banco.Menus
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    MenuConta c = new MenuConta();
-                    c.MenuCadastroConta();
+                    MenuPrincipal mp = new MenuPrincipal();
+                    mp.TelaInicial();
                     break;
             }
         }

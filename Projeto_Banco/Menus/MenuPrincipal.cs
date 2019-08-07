@@ -51,8 +51,8 @@ namespace Projeto_Banco.Menus
 
                 case ConsoleKey.F5:
                     Console.Clear();
-                    MenuCadastroFuncionario cf = new MenuCadastroFuncionario();
-                    cf.MenuCadastrarPessoaFisica();
+                    MenuFuncionario cf = new MenuFuncionario();
+                    cf.MenuCadastrarFuncionario();
                     
                     break;
 

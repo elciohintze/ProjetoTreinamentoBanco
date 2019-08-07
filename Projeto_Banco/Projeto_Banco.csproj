@@ -48,7 +48,7 @@
     <Compile Include="DadosBancario\Operacao.cs" />
     <Compile Include="DadosPessoa\Funcionario.cs" />
     <Compile Include="Menus\MenuAgencia.cs" />
-    <Compile Include="Menus\MenuCadastroFuncionario.cs" />
+    <Compile Include="Menus\MenuFuncionario.cs" />
     <Compile Include="Menus\MenuCadastrarPFisica.cs" />
     <Compile Include="Menus\MenuCadastrarPJuridica.cs" />
     <Compile Include="Menus\MenuConta.cs" />
