@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto_Banco.DadosBancario;
+using Projeto_Banco.DAO;
+
 namespace Projeto_Banco.Menus
 {
-    class MenuConta
+    public class MenuConta
     {
+        private ContaDAO _contaDao = new ContaDAO();
         public void MenuCadastroConta()
         {
             Console.WriteLine("-----------------------------------------");
@@ -25,8 +28,7 @@ namespace Projeto_Banco.Menus
             switch (teclaDigitada.Key)
             {
                 case ConsoleKey.F1:
-                    //chamar metodo de cadastro
-                    
+                    CadastrarConta();                    
                     break;
 
                 case ConsoleKey.F2:
@@ -39,7 +41,6 @@ namespace Projeto_Banco.Menus
 
         public void CadastrarConta()
         {
-            List<Conta> contas = new List<Conta>();
             Conta conta = new Conta();
 
             Console.WriteLine("Informe o codigo da agência");
@@ -52,7 +53,7 @@ namespace Projeto_Banco.Menus
             conta.SaldoConta = Convert.ToInt32(Console.ReadLine());
 
             conta.DataAberturaConta = DateTime.Now;
-            contas.Add(conta);
+            _contaDao.CadastroConta(conta);
 
         }
     }

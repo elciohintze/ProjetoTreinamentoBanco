@@ -41,6 +41,7 @@ namespace Projeto_Banco.Menus
 
         public void CadastrarAgencia()
         {
+            Console.Clear();
             List<Agencia> agenciaCadastrada = new List<Agencia>();
 
             Agencia agencia = new Agencia();
@@ -59,9 +60,8 @@ namespace Projeto_Banco.Menus
 
             agenciaCadastrada.Add(agencia);
             Console.WriteLine("Agência cadastrada!!!");
-            Console.Read();
 
-            Console.WriteLine("Deseja retornar ao menu principal?\n F1 - SIM\n F2 - NAO");
+            Console.WriteLine("Deseja retornar ao menu de cadastro?\n F1 - SIM\n F2 - NAO");
 
             var novoCadastro = Console.ReadKey();
             switch (novoCadastro.Key)

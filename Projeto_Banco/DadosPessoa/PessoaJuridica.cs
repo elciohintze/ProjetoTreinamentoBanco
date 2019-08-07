@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Banco
 {
-    class PessoaJuridica
+    public class PessoaJuridica
     {
         public int Id { get; set; }
         public string RazaoSocial { get; set; }

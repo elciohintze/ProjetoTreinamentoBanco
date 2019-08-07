@@ -15,5 +15,6 @@ namespace Projeto_Banco.DadosBancario
         public int OperacaoVinculada { get; set; }
         public int TipoOperacao { get; set; } //debito ou credito
         public double ValorOperacao { get; set; }
+
     }
 }

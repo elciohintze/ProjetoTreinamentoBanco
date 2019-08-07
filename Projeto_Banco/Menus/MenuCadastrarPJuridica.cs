@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Banco.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Projeto_Banco.Menus
 {
     class MenuCadastrarPJuridica
     {
+        private PessoaJuridicaDAO _pessoaJuridicaDAO = new PessoaJuridicaDAO();
         public void MenuCadastrarPessoaJuridica()
         {
             Console.WriteLine("-----------------------------------------");
@@ -41,8 +43,7 @@ namespace Projeto_Banco.Menus
 
         public void CadastrarPessoaJuridica()
         {
-            PessoaJuridica pj = new PessoaJuridica();
-            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+            PessoaJuridica pj = new PessoaJuridica();           
 
             Console.Clear();
             Console.WriteLine("------------------------------");
@@ -88,8 +89,8 @@ namespace Projeto_Banco.Menus
 
             Console.WriteLine("Informe a UF: ");
             pj.Uf = Console.ReadLine();
-
-            listaPj.Add(pj);
+           
+            _pessoaJuridicaDAO.CadastroPJuridica(pj);
 
             Console.WriteLine("Dados Salvos! Segue detalhes:");
         }
