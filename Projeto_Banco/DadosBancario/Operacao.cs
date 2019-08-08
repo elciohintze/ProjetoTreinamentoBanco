@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Banco.DadosBancario
 {
-    class Operacao
+    public class Operacao
     {
         public int IdOperacao { get; set; }
         public int IdContaMovimentada { get; set; }

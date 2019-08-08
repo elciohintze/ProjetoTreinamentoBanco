@@ -75,7 +75,7 @@ namespace Projeto_Banco.Menus
                 }
             }
 
-            Console.WriteLine("Informe Data abertura: \n");
+            Console.WriteLine("Informe Data abertura: (dd/mm/aaaa)\n");
             pj.DtAbertura = Convert.ToDateTime(Console.ReadLine());
 
             Console.WriteLine("Informe o logradouro: ");

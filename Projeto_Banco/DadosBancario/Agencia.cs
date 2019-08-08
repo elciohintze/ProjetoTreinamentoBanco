@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Banco.DadosBancario
 {
-    class Agencia
+   public class Agencia
     {
         public int IdAgencia { get; set; }
         public int CodigoAgencia { get; set; }

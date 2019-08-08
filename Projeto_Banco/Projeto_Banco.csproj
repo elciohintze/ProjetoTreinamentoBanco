@@ -47,7 +47,9 @@
     <Compile Include="DadosBancario\Conta.cs" />
     <Compile Include="DadosBancario\Operacao.cs" />
     <Compile Include="DadosPessoa\Funcionario.cs" />
+    <Compile Include="DAO\AgenciaDAO.cs" />
     <Compile Include="DAO\ContaDAO.cs" />
+    <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoaFisicaDAO.cs" />
     <Compile Include="DAO\PessoaJuridicaDAO.cs" />
     <Compile Include="Menus\MenuAgencia.cs" />

@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto_Banco.DadosBancario;
+using Projeto_Banco.DAO;
 
 namespace Projeto_Banco.Menus
 {
     class MenuAgencia
     {
+        private AgenciaDAO _agenciaDAO = new AgenciaDAO();
         public void MenuCadastroAgencia()
         {
             Console.Clear();
@@ -41,8 +43,7 @@ namespace Projeto_Banco.Menus
 
         public void CadastrarAgencia()
         {
-            Console.Clear();
-            List<Agencia> agenciaCadastrada = new List<Agencia>();
+            Console.Clear();            
 
             Agencia agencia = new Agencia();
            
@@ -58,7 +59,8 @@ namespace Projeto_Banco.Menus
             Console.WriteLine("Informe a UF: ");
             agencia.UfAgencia = Console.ReadLine();
 
-            agenciaCadastrada.Add(agencia);
+            _agenciaDAO.CadastroAgencia(agencia);
+
             Console.WriteLine("Agência cadastrada!!!");
 
             Console.WriteLine("Deseja retornar ao menu de cadastro?\n F1 - SIM\n F2 - NAO");
