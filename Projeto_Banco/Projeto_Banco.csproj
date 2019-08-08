@@ -52,6 +52,7 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoaFisicaDAO.cs" />
     <Compile Include="DAO\PessoaJuridicaDAO.cs" />
+    <Compile Include="Menus\IMenu.cs" />
     <Compile Include="Menus\MenuAgencia.cs" />
     <Compile Include="Menus\MenuFuncionario.cs" />
     <Compile Include="Menus\MenuCadastrarPFisica.cs" />

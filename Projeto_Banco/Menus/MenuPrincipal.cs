@@ -28,31 +28,31 @@ namespace Projeto_Banco.Menus
                 case ConsoleKey.F1:
                     Console.Clear();
                     MenuCadastrarPFisica pf = new MenuCadastrarPFisica();
-                    pf.MenuCadastrarPessoaFisica();
+                    pf.MenuCadastrar();
                     break;
 
                 case ConsoleKey.F2:
                     Console.Clear();
                     MenuCadastrarPJuridica pj = new MenuCadastrarPJuridica();
-                    pj.MenuCadastrarPessoaJuridica();
+                    pj.MenuCadastrar();
                     break;
 
                 case ConsoleKey.F3:
                     Console.Clear();
                     MenuAgencia a = new MenuAgencia();
-                    a.MenuCadastroAgencia();
+                    a.MenuCadastrar();
                     break;
 
                 case ConsoleKey.F4:
                     Console.Clear();
                     MenuConta c = new MenuConta();
-                    c.MenuCadastroConta();
+                    c.MenuCadastrar();
                     break;
 
                 case ConsoleKey.F5:
                     Console.Clear();
                     MenuFuncionario cf = new MenuFuncionario();
-                    cf.MenuCadastrarFuncionario();
+                    cf.MenuCadastrar();
                     
                     break;
 

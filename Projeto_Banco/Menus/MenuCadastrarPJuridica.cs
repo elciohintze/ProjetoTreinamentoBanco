@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Projeto_Banco.Menus
 {
-    class MenuCadastrarPJuridica
+    public class MenuCadastrarPJuridica : IMenu
     {
         private PessoaJuridicaDAO _pessoaJuridicaDAO = new PessoaJuridicaDAO();
-        public void MenuCadastrarPessoaJuridica()
+
+
+        public void MenuCadastrar()
         {
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("                 MyBank                  ");
@@ -27,7 +29,7 @@ namespace Projeto_Banco.Menus
             switch (teclaDigitada.Key)
             {
                 case ConsoleKey.F1:
-                    CadastrarPessoaJuridica();
+                    Cadastrar();
                     break;
 
                 case ConsoleKey.F2:
@@ -35,15 +37,12 @@ namespace Projeto_Banco.Menus
                     MenuPrincipal mp = new MenuPrincipal();
                     mp.TelaInicial();
                     break;
-
             }
-
-           
         }
 
-        public void CadastrarPessoaJuridica()
+        public void Cadastrar()
         {
-            PessoaJuridica pj = new PessoaJuridica();           
+            PessoaJuridica pj = new PessoaJuridica();
 
             Console.Clear();
             Console.WriteLine("------------------------------");
@@ -89,10 +88,10 @@ namespace Projeto_Banco.Menus
 
             Console.WriteLine("Informe a UF: ");
             pj.Uf = Console.ReadLine();
-           
+
             _pessoaJuridicaDAO.CadastroPJuridica(pj);
 
-            Console.WriteLine("Dados Salvos! Segue detalhes:");
+            Console.WriteLine("Dados Salvos!");
         }
     }
 }

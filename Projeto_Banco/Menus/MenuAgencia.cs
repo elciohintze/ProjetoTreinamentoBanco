@@ -8,10 +8,11 @@ using Projeto_Banco.DAO;
 
 namespace Projeto_Banco.Menus
 {
-    class MenuAgencia
+    class MenuAgencia : IMenu
     {
         private AgenciaDAO _agenciaDAO = new AgenciaDAO();
-        public void MenuCadastroAgencia()
+
+        public void MenuCadastrar()
         {
             Console.Clear();
             Console.WriteLine("-----------------------------------------");
@@ -29,7 +30,7 @@ namespace Projeto_Banco.Menus
             switch (teclaDigitada.Key)
             {
                 case ConsoleKey.F1:
-                    CadastrarAgencia();
+                    Cadastrar();
                     break;
 
                 case ConsoleKey.F2:
@@ -41,12 +42,12 @@ namespace Projeto_Banco.Menus
             }
         }
 
-        public void CadastrarAgencia()
+        public void Cadastrar()
         {
-            Console.Clear();            
+            Console.Clear();
 
             Agencia agencia = new Agencia();
-           
+
             Console.WriteLine("Informe o codigo da agencia: ");
             agencia.CodigoAgencia = Convert.ToInt32(Console.ReadLine());
 
@@ -70,7 +71,7 @@ namespace Projeto_Banco.Menus
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    MenuCadastroAgencia();
+                    MenuCadastrar();
                     break;
                 case ConsoleKey.F2:
                     Console.Clear();
@@ -78,9 +79,6 @@ namespace Projeto_Banco.Menus
                     mp.TelaInicial();
                     break;
             }
-            
-            
-
         }
     }
 }

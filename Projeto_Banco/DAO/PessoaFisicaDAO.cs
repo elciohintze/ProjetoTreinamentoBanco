@@ -8,11 +8,11 @@ namespace Projeto_Banco.DAO
 {
     public class PessoaFisicaDAO
     {
-        private List<PessoaFisica> listaPf = new List<PessoaFisica>();
+        private List<PessoaFisica> _listaPf = new List<PessoaFisica>();
 
         public void CadastroPFisica(PessoaFisica pf)
         {
-            listaPf.Add(pf);
+            _listaPf.Add(pf);
         }
     }
 }

@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Projeto_Banco.Menus
 {
-    class MenuCadastrarPFisica
+    public class MenuCadastrarPFisica : IMenu
     {
         private PessoaFisicaDAO _pessoaFisicaDAO = new PessoaFisicaDAO();
-        public void MenuCadastrarPessoaFisica()
+       
+        public void MenuCadastrar()
         {
+
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("                 MyBank                  ");
             Console.WriteLine("-----------------------------------------");
@@ -27,7 +29,7 @@ namespace Projeto_Banco.Menus
             switch (teclaDigitada.Key)
             {
                 case ConsoleKey.F1:
-                    CadastrarPessoaFisica();
+                    Cadastrar();
                     break;
 
                 case ConsoleKey.F2:
@@ -37,9 +39,9 @@ namespace Projeto_Banco.Menus
                     break;
             }
         }
-        public void CadastrarPessoaFisica()
-        {
 
+        public void Cadastrar()
+        {
             PessoaFisica pf = new PessoaFisica();
 
             Console.Clear();
@@ -84,8 +86,6 @@ namespace Projeto_Banco.Menus
             Console.WriteLine("Informe a UF: ");
             pf.Uf = Console.ReadLine();
             _pessoaFisicaDAO.CadastroPFisica(pf);
-
-            Console.WriteLine("Dados Salvos! Segue detalhes:");
         }
     }
 }

@@ -11,5 +11,10 @@ namespace Projeto_Banco.DadosPessoa
         public DateTime DtAdminissao { get; set; }
         public string Funcao { get; set; }
         public double Salario { get; set; }
+
+        internal void Add(Funcionario f)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

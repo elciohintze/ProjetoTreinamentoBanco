@@ -8,10 +8,11 @@ using Projeto_Banco.DAO;
 
 namespace Projeto_Banco.Menus
 {
-    public class MenuConta
+    public class MenuConta : IMenu
     {
         private ContaDAO _contaDao = new ContaDAO();
-        public void MenuCadastroConta()
+
+        public void MenuCadastrar()
         {
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("                 MyBank                  ");
@@ -28,7 +29,7 @@ namespace Projeto_Banco.Menus
             switch (teclaDigitada.Key)
             {
                 case ConsoleKey.F1:
-                    CadastrarConta();                    
+                    Cadastrar();
                     break;
 
                 case ConsoleKey.F2:
@@ -39,7 +40,7 @@ namespace Projeto_Banco.Menus
             }
         }
 
-        public void CadastrarConta()
+        public void Cadastrar()
         {
             Conta conta = new Conta();
 
@@ -54,7 +55,6 @@ namespace Projeto_Banco.Menus
 
             conta.DataAberturaConta = DateTime.Now;
             _contaDao.CadastroConta(conta);
-
         }
     }
 }

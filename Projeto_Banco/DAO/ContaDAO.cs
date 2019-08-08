@@ -9,11 +9,11 @@ namespace Projeto_Banco.DAO
 {
     public class ContaDAO 
     {
-        private List<Conta> contas = new List<Conta>();
+        private List<Conta> _contas = new List<Conta>();
 
 
-        public void CadastroConta(Conta a) {
-            contas.Add(a);
+        public void CadastroConta(Conta newConta) {
+            _contas.Add(newConta);
         }
 
     }
